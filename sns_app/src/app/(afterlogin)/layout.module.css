@@ -1,0 +1,87 @@
+.container {
+    display: flex;
+    align-items: stretch;
+}
+
+.leftSectionWrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
+.leftSection {
+    flex: 1;
+    padding: 0 8px;
+    height: 100dvh;
+    width: 275px;
+    background-color: aqua;
+}
+
+.leftSectionFixed {
+    position: fixed;
+    width: inherit;
+    height: 100dvh;
+    background-color: aliceblue;
+}
+
+.logo {
+    display: inline-block;
+    height: 56px;
+    margin-top: 2px;
+}
+
+.logoPill {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoPill:hover {
+    background-color: rgba(15,20,25, 0.1);
+}
+
+.rightSectionWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    flex-grow: 1;
+}
+
+.rightSectionInner {
+    height: 100%;
+    width: 990px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main {
+    width: 600px;
+    background-color: red;
+}
+
+.rightSection {
+    width: 350px;
+    height: 100%;
+    background-color: orange;
+}
+
+.search {
+    position: fixed;
+    height: 42px;
+    width: inherit;
+    border-radius: 21px;
+    background-color: rgb(239, 243, 244);
+    margin-top: 6px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.search svg {
+    margin-left: 20px;
+    fill: rgb(83,100,113);
+}
