@@ -3,6 +3,10 @@ import style from '@/app/(afterlogin)/layout.module.css'
 import Link from "next/link";
 import Image from "next/image";
 import logo from "../../../public/logo.png"
+import NavMenu from "./_component/NavMenu";
+import LogoutButton from "@/app/(afterlogin)/_component/LogoutButton";
+import TrendSection from "@/app/(afterlogin)/_component/TrendSection";
+import FollowSection from "@/app/(afterlogin)/_component/FollowSection";
 
 
 export default function AfterLoginLayout({children} : {children: ReactNode}) {
@@ -16,6 +20,17 @@ export default function AfterLoginLayout({children} : {children: ReactNode}) {
                                 <Image src={logo} alt="logo" width= {40} height={40} />
                             </div>
                         </Link>
+                        <nav>
+                            <ul>
+                                <NavMenu/>
+                            </ul>
+                            <div>
+                                게시하기
+                            </div>
+                        </nav>
+                        <div>
+                            <LogoutButton/>
+                        </div>
                     </div>
                 </section>
 
@@ -34,6 +49,8 @@ export default function AfterLoginLayout({children} : {children: ReactNode}) {
                                 </g>
                             </svg>
                         </form>
+                        <TrendSection/>
+                        <FollowSection/>
                     </section>
                 </div>
             </div>

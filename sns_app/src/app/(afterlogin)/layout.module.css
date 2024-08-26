@@ -11,18 +11,21 @@
 }
 
 .leftSection {
-    flex: 1;
     padding: 0 8px;
     height: 100dvh;
     width: 275px;
-    background-color: aqua;
 }
 
 .leftSectionFixed {
     position: fixed;
     width: inherit;
-    height: 100dvh;
-    background-color: aliceblue;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.leftSectionFixed nav {
+    flex-grow: 1;
 }
 
 .logo {
@@ -66,7 +69,6 @@
 .rightSection {
     width: 350px;
     height: 100%;
-    background-color: orange;
 }
 
 .search {
