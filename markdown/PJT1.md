@@ -107,3 +107,29 @@ export default function BeforeLogin({
 
 # Private folder (_폴더)
 - url 주소에 영향을 주지 않는 폴더, 공통된 것들을 묶어두기 좋음.
+
+# 좌우 균형 맞추기
+- Flutter의 경우 Center을 하면 되긴함
+- Nextjs 사용시 중앙배열을 해도 괜찮고, 양쪽에 flex-grow 1을 주는 방법으로도 구현 가능.
+
+# Active Link
+- 여러개의 Nav Bar가 있을 때, 클릭하면 Bold처리 등의 강조가 되는 Link의미
+- 나의 현재 위치 => 강조 로직으로 구현해야함.
+  - 이는 서버 컴포넌트에선 불가능하므로 use client
+  - Next에서 제공하는 useSelectedlayoutSegment를 활용
+    - 자식 폴더 하나만 있어도 된다? useSelectedLayoutSegment, 세부정보 필요하면 s 붙히고
+
+# 반투명 component
+- backdrop-filter: blur 12px;
+
+# dayjs
+- 몇초전 / 몇분전 게시글 작성 등 시간계산에 활용하는 라이브러리
+
+# 클래스 합성
+- 조건에 따라 다른 이미지(좋아요를 누른경우 등)를 표시해야 할 때 사용한다.
+- classnames와 같은 라이브러리를 활용한다.
+  - 조건을 주고, 조건에 따라 합성 여부 결정
+  - 조건부 클래스를 관리하는데 도움이 되는 라이브러리
+
+# npm trends
+- 라이브러리 트랜드를 확인할 수 있는 사이트로, 그래프를 보며 활용할 라이브러리를 결정하는 것도 괜찮다.

@@ -7,12 +7,8 @@ export default function LoginModal() {
   const [id, setId] = useState();
   const [password, setPassword] = useState();
   const [message, setMessage] = useState();
-  const onSubmit = () => {
-    console.log('clicked submit');
-  };
-  const onClickClose = () => {
-    console.log('clicked close');
-  };
+  const onSubmit = () => {};
+  const onClickClose = () => {};
 
   const onChangeId = () => {};
 
