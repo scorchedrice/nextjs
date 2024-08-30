@@ -76,10 +76,17 @@ export default function Default() {
 - push : 기록을 남기고 이동 ; 뒤로가기 하는 경우 바로 전으로
 
 # use client
-- SSR 의 경우 Hook을 사용할 수 없다. (useState, useEffect)
+- SSR 의 경우 Hook을 사용할 수 없다. (useState, useEffect, useSelected...Segment)
     - 이 문제를 해결하기 위해 상단에 use client 사용.
     - 물론 이렇게 한다고 CSR이 되는건 아니니 착각하지 말기.
+- onClick과 같은 이벤트 리스너가 존재하는 경우 사용
 
+# useSelectedLayoutSegment : 나의 위치 파악
+- segment: useSelectedLayoutSegment()
+  - segment는 나의 위치를 표시해주는 역할을 한다.
+  - 즉, 나의 위치 (page.tsx가 존재하는 폴더)를 나타낸다는 것이다.
+  - useSelected ... Segments : s를 추가하면 하위 폴더까지 표시 가능하다.
+  - 
 
 # NextJS에서 활용되는 TypeScript 내용
 ## 사용 방법
