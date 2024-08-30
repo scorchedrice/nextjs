@@ -52,8 +52,9 @@
 ## Parallel
 - @를 붙혀 파일 생성 (디렉토리 설정)
 - A와 B를 같이 띄우고 싶다? 이 때 사용.
-    - 단, A와 B(modal, @로 시작하는 폴더)가 같은 위치에 있어야 한다.
-- 그 동시에, 일정 페이지에서 모달이 뜨도록 해야한다면? => 하위 폴더를 생성하고, @modal 폴더에 default.tsx를 생성한다.
+  - 단, A와 B(modal, @로 시작하는 폴더)가 같은 위치에 있어야 한다.
+- 그 동시에, 일정 페이지에서 모달이 뜨도록 해야한다면? => 하위 폴더를 생성하고, @modal 폴더에 **default.tsx**를 생성한다.
+  - depth가 깊어질수록, page 마다 default.tsx 를 생성해야한다.
 
 - 즉, localhost:3000 => children : page.tsx, modal : @modal/default.tsx
 - localhost:3000/하위주소 => children : 하위주소/page.tsx, modal : @modal/하위주소/page.tsx
@@ -86,7 +87,33 @@ export default function Default() {
   - segment는 나의 위치를 표시해주는 역할을 한다.
   - 즉, 나의 위치 (page.tsx가 존재하는 폴더)를 나타낸다는 것이다.
   - useSelected ... Segments : s를 추가하면 하위 폴더까지 표시 가능하다.
-  - 
+
+# usePathname : url에서의 이름 사용
+- use client
+- 현재 위치 파악할 때 사용
+- ex) 만약 '/explore' 에서 나타나지 않도록 하고 싶다면 해당 훅을 사용해 === => null 사용
+
+# 주소창에 담겨있는 정보
+- query
+- props에 담겨있다.
+  ```tsx
+  type Props = {
+  searchParams: { q: string, f?: string, pf?: string };
+  }
+  export default function Search({ searchParams }: Props) {
+  ...
+  ```
+
+# client component + server component
+- server component를 부모로해서 client component를 import해서 사용하면 된다.
+
+# click event가 겹치는 경우
+- onclickcapture 등의 핸들러 사용 가능
+
+# WebStorm 꿀팁
+- 옮기기
+  - export const ... 의 경우 F6을 눌러 옮길 수 있다. 이 때 import 같은거 다 옮겨준다.
+  - Refactor가 잘 되어있으니 활용 잘해보자
 
 # NextJS에서 활용되는 TypeScript 내용
 ## 사용 방법
